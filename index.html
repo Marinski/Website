@@ -13,14 +13,14 @@
 
     <header>
         <a href="#" class="logo">Logo</a>
-        <div class="toggle"></div>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#contact">Contant us</a></li>
+        <div class="toggle" onclick="toggleMenu()"></div>
+        <ul class="menu">
+            <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#services" onclick="toggleMenu()">Services</a></li>
+            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#testimonials" onclick="toggleMenu()">Testimonials</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact us</a></li>
         </ul>
     </header>
 
@@ -39,11 +39,13 @@
         <div class="content">
             <div class="contentBx w50">
                 <h3>Lorem ipsum dolor sit amet</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic magni non unde a, nostrum reprehenderit alias provident, quas tempora explicabo amet molestias accusantium numquam. Numquam asperiores necessitatibus modi eius ipsum!<br>Lorem,
-                    ipsum dolor sit amet consectetur adipisicing elit. Hic magni non unde a, nostrum reprehenderit alias provident, quas tempora explicabo amet molestias accusantium numquam. Numquam asperiores necessitatibus modi eius ipsum!</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic magni non unde a, nostrum reprehenderit alias provident, quas tempora explicabo amet molestias accusantium numquam. Numquam asperiores necessitatibus modi eius ipsum! Lorem,
+                    ipsum dolor sit amet consectetur adipisicing elit. Hic magni non unde a, nostrum reprehenderit alias provident, quas tempora explicabo amet molestias accusantium numquam. Numquam asperiores necessitatibus modi eius ipsum!<br><br>Lorem,
+                    ipsum dolor sit amet consectetur adipisicing elit. Hic magni non unde a, nostrum reprehenderit alias provident, quas tempora explicabo amet molestias accusantium numquam. Numquam asperiores necessitatibus modi eius ipsum! Lorem, ipsum
+                    dolor sit amet consectetur adipisicing elit. Hic magni non unde a, nostrum reprehenderit alias provident, quas tempora explicabo amet molestias accusantium numquam. Numquam asperiores necessitatibus modi eius ipsum!</p>
             </div>
             <div class="w50">
-                <img src="./img/banner.jpg" class="img" alt="">
+                <img src="./img/about-us.jpg" class="img" alt="">
             </div>
         </div>
     </section>
@@ -94,16 +96,16 @@
         </div>
         <div class="content">
             <div class="workBx">
-                <img src="./img/banner.jpg" alt="">
+                <img src="./img/project-1.jpg" alt="">
             </div>
             <div class="workBx">
-                <img src="./img/banner.jpg" alt="">
+                <img src="./img/project-2.jpg" alt="">
             </div>
             <div class="workBx">
-                <img src="./img/banner.jpg" alt="">
+                <img src="./img/project-3.jpg" alt="">
             </div>
             <div class="workBx">
-                <img src="./img/banner.jpg" alt="">
+                <img src="./img/project-4.jpg" alt="">
             </div>
         </div>
         <div class="heading">
@@ -185,6 +187,13 @@
             var header = document.querySelector('header');
             header.classList.toggle('sticky', window.scrollY > 0);
         });
+
+        function toggleMenu() {
+            var menuToggle = document.querySelector('.toggle');
+            var menu = document.querySelector('.menu');
+            menuToggle.classList.toggle('active');
+            menu.classList.toggle('active');
+        }
     </script>
 
 </body>
